@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- linking to custom style sheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- importing bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <title>Lucky Sevens</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center">Lucky Sevens</h1>
+            <hr class="my-4">
+            <p class="text-center">
+                <label class="text-center" for="bet">Starting Bet:</label>
+                <input class="text-center" type="number" value="" id="bet" placeholder="$0.00">
+            </p>
+            <div>
+                <p class="text-center">
+                    <input class="btn btn-primary bet" type="submit" id="play" value="Play!">
+                </p>
+            </div>
+            <!-- alert will not be displayed until the user has played the game -->
+            <div style="display: none;" class="alert alert-success" role="alert" id="gameOver">
+                Game over! would you like to play again?
+            </div>
+            <div>
+                <p class="text-center">
+                    <!-- reset button will not be displayed until the user has played the game -->
+                    <input class="btn btn-primary" id="resetButton" style="display: none;" type="reset" value="Reset">
+                </p>
+            </div>
+        </div>
+        <!-- results table will not be displayed until the user has played the game -->
+        <div id="table-div" style="display: none;">
+            <h1 class="text-center" id="table-h1">Results</h1>
+            <table id="table" class="table table-striped">
+                <tbody>
+                    <tr>
+                        <th scope="row">Starting Bet</th>
+                        <td id="startBet"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Total Rolls Before Going Broke</th>
+                        <td id="totalRolls"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Highest Amount Won</th>
+                        <td id="maxAmount"></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Roll Count at Highest Amount Won</th>
+                        <td id="maxAmountCount"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+<!-- linking to JS file -->
+<script type="text/javascript" src="script.js"></script>
+
+</html>

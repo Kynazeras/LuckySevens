@@ -1,0 +1,19 @@
+/* spacing out the heading  */
+h1 {
+  padding-bottom: 10px;
+}
+
+/* adding a border to the input field */
+#bet {
+  border: 2px solid black;
+}
+
+/* keeping the jumbotron spaced fro mthe browser's border */
+.jumbotron {
+  margin-top: 50px;
+}
+
+/* making the 'starting bet' label bold */
+label {
+  font-weight: bold;
+}
